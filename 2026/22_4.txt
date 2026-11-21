@@ -55,7 +55,7 @@ def GCcontent (d):
     if longitud_total==0:
         return 0.0
     for letra in d: 
-        if letra== "G" or letra =="C":
+        if letra== "G" or letra =="C" or letra=='g' or letra=='c':
             conteo_gc += 1
     porcentaje= (conteo_gc/longitud_total)
     return porcentaje
