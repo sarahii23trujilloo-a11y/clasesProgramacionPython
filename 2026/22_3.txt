@@ -1,4 +1,3 @@
-###Problemas a corregir: ej. 4: la posición se escribe a mano y no es la de la primera 'a'
 #1. Investigar cómo se usa el operador módulo (modulus) en python, explicarlo con sus palabras y poner un ejemplo. (1 punto)
 #un operador modulo se representa con % y seusapara obtener el residuo de una division 
 number=5
@@ -18,19 +17,21 @@ for n in range (12,30):
         print("encontrado el 12")
         break 
     print(n) 
-### Nota: falta explicar con tus palabras qué hace break; ¿qué le pasa al ciclo cuando se ejecuta?
 for x in range (70,80):
     if x==75:
        print(x) 
 #4. Programar el método find de los strings a mano. (2 puntos) Sugerencia: utilizar break cuando encuentren lo que buscan
 palabra = 'banana'
-for letra in palabra: 
-    if letra=="a":
-        print(2)
-### El 2 está escrito a mano, no se calcula; ¿cómo llevarías la cuenta de la posición mientras recorres la palabra? Revisa también desde qué número se cuentan las posiciones.
-        break
-    print(letra)
-# regresar la posición de la primera 'a'
+
+def buscar(texto, objetivo):
+    posicion = 0
+    for letra in texto:
+        if letra == objetivo:
+            return posicion
+        posicion += 1
+    return -1
+
+print(buscar(palabra, 'a'))  # Imprime 1, la posición de la primera 'a'
 
 #5. Imprimir todos los números de la siguiente lista utilizando ciclos: (4 puntos)
 lista = [ [1], [1,2], [1,2,3], [1,2,3,4], [1,2,3,4,5] ]
